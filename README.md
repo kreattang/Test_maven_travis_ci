@@ -19,18 +19,24 @@ language: java
 jdk:
  - openjdk11
 ```
-Fix the README.md badges (replacing in the URL joaomlneto with your-github-username) and push the changes.
+* Fix the README.md badges(copy the markdown code from [Travis CI](https://travis-ci.com/) and replace the top line of readme.md)
+> [Travis CI](https://travis-ci.com/) => select your repository => click the status image => select FORMAT as Markdown => Copy the context of RESULT => paste in readme.md
+
+* You can also choose to replace _kreattang_ in the URL with your-github-username instead of this operation.
+
 2. Testing
 * Go to the [Codecov website](https://about.codecov.io/) and Sign in with GitHub account.
-* Accept the Authorization of Codecov andd add your repository 
-* add the following code in the end of _.travis.yml_ file. This is to enable CodeCov's coverage.
+* Accept the Authorization of Codecov and add your repository 
+* Add the following code in the end of _.travis.yml_ file. This is to enable CodeCov's coverage.
 If a build is successful, the code is submitted for coverage analysis
 ```
 after_success:
   - bash <(curl -s https://codecov.io/bash)
 ```
+* Fix the README.md badge.
+> [Codecov](https://codecov.io/gh)  =>select your repository => Setting => Bedge => Copy the contect of Markdown => paste in readme.md
 
- 3.Deploying
+3.Deploying
  * Travis CI can notify you about your build results through email, IRC, chat or custom webhooks.
  ```
  notifications:
