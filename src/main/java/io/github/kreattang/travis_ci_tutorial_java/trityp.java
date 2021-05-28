@@ -76,6 +76,7 @@ class trityp
 
         /* Confirm it's a legal triangle before declaring  */
         /* it to be isosceles or equilateral  */
+        //test
 
         if (triOut > 3)
             triOut = 3;
