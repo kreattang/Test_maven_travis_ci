@@ -1,12 +1,11 @@
 [![Build Status](https://travis-ci.com/kreattang/Test_maven_travis_ci.svg?branch=main)](https://travis-ci.com/kreattang/Test_maven_travis_ci)
 [![codecov](https://codecov.io/gh/kreattang/Test_maven_travis_ci/branch/main/graph/badge.svg?token=WI3NQL4HK5)](https://codecov.io/gh/kreattang/Test_maven_travis_ci)
 
-# travis-ci-tutorial-java
+# Test_maven_travis_ci
 Just to learn how to use travis-ci in a java project!
 
 This is a working minimal example of how to use Travis CI (and Codecov) with Java on GitHub.
 
-- It uses the [JUnit](https://junit.org) testing framework
 
 # How To Start
 
@@ -24,15 +23,6 @@ What's done for you:
 
 If you want to use it:
 - Go to the Codecov website and create an account and setup permissions.
-- Add your repository (you can go there directly by going to https://codecov.io/gh/your-github-username/travis-ci-tutorial-java)
+- Add your repository
 - Fix the `README.md` badge.
 
-If you don't want it:
-- Remove the [JaCoCo](https://www.jacoco.org) plugin from the `pom.xml`.
-- Remove the `after_success` target in `.travis.yml`
-- Remove the badge from `README.md`
-
-# Contributing
-
-Spotted a mistake? Questions? Suggestions?  
-[Open an Issue](https://github.com/joaomlneto/travis-ci-tutorial-java/issues/new)!
