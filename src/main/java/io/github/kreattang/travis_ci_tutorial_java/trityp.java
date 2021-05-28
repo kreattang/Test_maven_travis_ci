@@ -66,7 +66,7 @@ class trityp
         if (triOut == 0)
         {  // Confirm it's a legal triangle before declaring
             // it to be scalene
-
+            // test 
             if (Side1+Side2 <= Side3 || Side2+Side3 <= Side1 ||
                     Side1+Side3 <= Side2)
                 triOut = 4;
