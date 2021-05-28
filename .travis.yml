@@ -14,7 +14,6 @@ deploy:
   provider: releases
   tag_name: "v0.0.0"
   api_key: $GITHUB_TOKEN
-  file: /src*
   skip_cleanup: true
   on:
     tags: true
