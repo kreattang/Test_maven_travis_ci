@@ -12,8 +12,12 @@ notifications:
 
 deploy:
   provider: releases
-  tag_name: "v0.0.0"
-  api_key: $GITHUB_TOKEN
+  file_glob: true
   skip_cleanup: true
+  api_key: $GITHUB_TOKEN
+  file:
+    - src
   on:
     tags: true
+    branch: master
+    repo: kreattang/Test_maven_travis_ci
