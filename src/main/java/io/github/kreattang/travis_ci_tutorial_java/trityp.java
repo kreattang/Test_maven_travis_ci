@@ -37,7 +37,6 @@ class trityp
     }
 
     // ====================================
-// The main triangle classification method
     static int Triang (int Side1, int Side2, int Side3)
     {
         int triOut;
