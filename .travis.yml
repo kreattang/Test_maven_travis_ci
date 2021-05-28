@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Travis CI Java documentation can be found in:
 # https://docs.travis-ci.com/user/languages/java/
 
@@ -6,6 +7,8 @@
 dist: xenial
 
 # This enables the 'defaults' to test java applications:
+=======
+>>>>>>> e8bee4878c3641abbe53eb8589d017e62349a437
 language: java
 
 # We can specify a list of JDKs to be used for testing
@@ -14,6 +17,7 @@ language: java
 jdk:
  - openjdk8
  - openjdk11
+<<<<<<< HEAD
 
 # Each job in Travis CI has several steps:
 # https://docs.travis-ci.com/user/job-lifecycle/
@@ -25,3 +29,5 @@ jdk:
 # If a build is successful, the code is submitted for coverage analysis
 after_success:
   - bash <(curl -s https://codecov.io/bash)
+=======
+>>>>>>> e8bee4878c3641abbe53eb8589d017e62349a437
