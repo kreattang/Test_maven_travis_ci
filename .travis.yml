@@ -19,9 +19,7 @@ deploy:
     - src
   on:
     tags: true
-    branch: master
+    branch: tag
     repo: kreattang/Test_maven_travis_ci
 
-branches:
-  only:
-    - /^\d+\.\d+\.\d+.*$/
+
