@@ -31,9 +31,5 @@ notifications:
     - 1841187753@qq.com
 
 deploy:
-  provider: releases
-  api_key: $GITHUB_TOKEN
-  file: src/*
-  skip_cleanup: true
   on:
-    tags: true
+    branch: release
