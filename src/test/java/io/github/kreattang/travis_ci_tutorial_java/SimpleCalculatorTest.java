@@ -1,6 +1,4 @@
-package io.github.joaomlneto.travis_ci_tutorial_java;
-
-import java.util.*;
+package io.github.kreattang.travis_ci_tutorial_java;
 
 import static org.junit.Assert.*;
 import org.junit.*;
