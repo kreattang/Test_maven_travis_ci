@@ -2,11 +2,11 @@
 [![codecov](https://codecov.io/gh/kreattang/Test_maven_travis_ci/branch/main/graph/badge.svg?token=WI3NQL4HK5)](https://codecov.io/gh/kreattang/Test_maven_travis_ci)
 
 # Test_maven_travis_ci
-This resepository is a demo of how to use [Travis CI]() in a Java project on GitHub.
+This repository is a demo of how to use [Travis CI](https://docs.travis-ci.com/) in a Java project on GitHub.
 
 # Usage
 1. Build
-* [Fork](https://github.com/kreattang/Test_maven_travis_ci/fork) this repository
+* Sign in to your user Github account and fork this repo
 * Go to [Travis-ci.com](https://travis-ci.com/) and Sign in with GitHub account.
 * Accept the Authorization of Travis CI. 
 * Click on your profile picture in the top right of your Travis Dashboard, click Settings and then the green Activate button, and select the repositories you want to use with Travis CI.
