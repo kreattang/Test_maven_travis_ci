@@ -5,12 +5,9 @@
 This repository is a demo of how to use [Travis CI](https://docs.travis-ci.com/) in a Java project on GitHub.
 
 # Usage
-1. Build
+## 1. Build
 * Sign in to your user Github account and fork this repo
-* Go to [Travis-ci.com](https://travis-ci.com/) and Sign in with GitHub account.
-* Accept the Authorization of Travis CI. 
-* Click on your profile picture in the top right of your Travis Dashboard, click Settings and then the green Activate button, and select the repositories you want to use with Travis CI.
-* Add a _.travis.yml_ file to your repository to tell Travis CI what to do. 
+* Add a _.travis.yml_ file to your repo to tell Travis CI what to do, commit the changes and push it to your repo
 ```
 language: java
 
@@ -19,12 +16,35 @@ language: java
 jdk:
  - openjdk11
 ```
+* Go to [Travis-ci.com](https://travis-ci.com/) and Sign in with GitHub account
+
+![avatar](https://github.com/kreattang/TravisCI_Java/blob/main/img/20210529151710.png)
+
+* Accept the Authorization of Travis C
+* Click on your profile picture in the top right of your Travis Dashboard, click Settings 
+
+![avator](https://github.com/kreattang/TravisCI_Java/blob/main/img/20210529153038.png)
+
+* Select the repositories you want to use with Travis CI
+
+![avatar](https://github.com/kreattang/TravisCI_Java/blob/main/img/20210529153337.png)
+
+* Click your repo and you will find it start build by Travis CI
+
+![avatar](https://github.com/kreattang/TravisCI_Java/blob/main/img/20210529152709.png)
+
+* If the build is passed, you will see as follows.
+
+![avatar](https://github.com/kreattang/TravisCI_Java/blob/main/img/20210529154131.png)
+
 * Fix the README.md badges(copy the markdown code from [Travis CI](https://travis-ci.com/) and replace the top line of readme.md)
-> [Travis CI](https://travis-ci.com/) => select your repository => click the status image => select FORMAT as Markdown => Copy the context of RESULT => paste in readme.md
+> [Travis CI](https://travis-ci.com/) => select your repository => click the build status image => select _FORMAT_ as Markdown => Copy the code of _RESULT_ => paste in the top line of readme.md
+
+![acatar](https://github.com/kreattang/TravisCI_Java/blob/main/img/20210529154809.png)
 
 * You can also choose to replace _kreattang_ in the URL with your-github-username instead of this operation.
 
-2. Test
+## 2. Test
 * Go to the [Codecov website](https://about.codecov.io/) and Sign in with GitHub account.
 * Accept the Authorization of Codecov and add your repository 
 * Add the following code in the end of _.travis.yml_ file. This is to enable CodeCov's coverage.
@@ -36,7 +56,7 @@ after_success:
 * Fix the README.md badge.
 > [Codecov](https://codecov.io/gh)  =>select your repository => Setting => Bedge => Copy the contect of Markdown => paste in readme.md
 
-3.Deploy
+## 3.Deploy
 * Travis CI can help you release to Github
 * You will need to provide a personal access token
 * Set the deployment provider details in _.travis.yml._
