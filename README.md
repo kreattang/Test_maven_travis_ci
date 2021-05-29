@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/kreattang/Test_maven_travis_ci.svg?branch=main)](https://travis-ci.com/kreattang/Test_maven_travis_ci)
+[![Build Status](https://www.travis-ci.com/kreattang/Travis_CI_Tutorial.svg?branch=main)](https://www.travis-ci.com/kreattang/Travis_CI_Tutorial)
 [![codecov](https://codecov.io/gh/kreattang/Test_maven_travis_ci/branch/main/graph/badge.svg?token=WI3NQL4HK5)](https://codecov.io/gh/kreattang/Test_maven_travis_ci)
 
 # Test_maven_travis_ci
@@ -37,8 +37,8 @@ jdk:
 
 ![avatar](https://github.com/kreattang/TravisCI_Java/blob/main/img/20210529154131.png)
 
-* Fix the README.md badges(copy the markdown code from [Travis CI](https://travis-ci.com/) and replace the top line of readme.md)
-> [Travis CI](https://travis-ci.com/) => select your repository => click the build status image => select _FORMAT_ as Markdown => Copy the code of _RESULT_ => paste in the top line of readme.md
+* Fix the README.md badges(copy the markdown code from [Travis CI](https://travis-ci.com/) and replace the top line of _readme.md_)
+> [Travis CI](https://travis-ci.com/) => select your repository => click the build status image => select _FORMAT_ as Markdown => Copy the code of _RESULT_ => paste in the top line of _readme.md_
 
 ![acatar](https://github.com/kreattang/TravisCI_Java/blob/main/img/20210529154809.png)
 
