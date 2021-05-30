@@ -1,4 +1,4 @@
-[![Build Status](https://www.travis-ci.com/kreattang/Travis_CI_Tutorial.svg?branch=main)](https://www.travis-ci.com/kreattang/Travis_CI_Tutorial)
+[![Build Status](https://www.travis-ci.com/kreattang/Test_maven_travis_ci.svg?branch=main)](https://www.travis-ci.com/kreattang/Test_maven_travis_ci)
 [![codecov](https://codecov.io/gh/kreattang/Test_maven_travis_ci/branch/main/graph/badge.svg?token=WI3NQL4HK5)](https://codecov.io/gh/kreattang/Test_maven_travis_ci)
 
 # Test_maven_travis_ci
@@ -25,7 +25,8 @@ jdk:
 
 ![avator](https://github.com/kreattang/TravisCI_Java/blob/main/img/20210529153038.png)
 
-* Select the repositories you want to use with Travis CI
+* Select the repo you want to use with Travis CI. If repo cannot be found, click _Sync account_.
+
 
 ![avatar](https://github.com/kreattang/TravisCI_Java/blob/main/img/20210529153337.png)
 
@@ -42,10 +43,12 @@ jdk:
 
 ![acatar](https://github.com/kreattang/TravisCI_Java/blob/main/img/20210529154809.png)
 
-* You can also choose to replace _kreattang_ in the URL with your-github-username instead of this operation.
-
 ## 2. Test
+This repo also integrates with Codecov to generate reports.
 * Go to the [Codecov website](https://about.codecov.io/) and Sign in with GitHub account.
+
+![avatar](https://github.com/kreattang/TravisCI_Java/blob/main/img/20210530091144.png)
+
 * Accept the Authorization of Codecov and add your repository 
 * Add the following code in the end of _.travis.yml_ file. This is to enable CodeCov's coverage.
 If a build is successful, the code is submitted for coverage analysis
@@ -57,9 +60,9 @@ after_success:
 > [Codecov](https://codecov.io/gh)  =>select your repository => Setting => Bedge => Copy the contect of Markdown => paste in readme.md
 
 ## 3.Deploy
-* Travis CI can help you release to Github
-* You will need to provide a personal access token
-* Set the deployment provider details in _.travis.yml._
+* Travis CI can help you release to Github. You will need to provide a [Github personal access token](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token). 
+
+* Set the deployment provider details in _.travis.yml_
 * Create a tag in a GitHub repository
 * Push your change and Travis CI will build environment again.
 
