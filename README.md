@@ -60,11 +60,17 @@ after_success:
 > [Codecov](https://codecov.io/gh)  =>select your repository => Setting => Bedge => Copy the contect of Markdown => paste in readme.md
 
 ## 3.Deploy
-* Travis CI can help you release to Github. You will need to provide a [Github personal access token](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token). 
+* Travis CI can help you release to Github. You will need to provide a Github personal access token(Tutorial: https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token). 
+* Now that we have a token go to the project you want to use it with on Travis CI. Then on your project page, go to More options => Settings.
 
-* Set the deployment provider details in _.travis.yml_
-* Create a tag in a GitHub repository
-* Push your change and Travis CI will build environment again.
+![avatar](https://github.com/kreattang/TravisCI_Java/blob/main/img/20210530094300.png)
+
+* In the _Environment Variables_ section, add variable named _GITHUB_TOKEN_ and use the generated token from Github in previous step.
+
+![avatar](https://github.com/kreattang/TravisCI_Java/blob/main/img/env-var.png)
+
+* Travis CI can automatically upload assets to git tags on your GitHub repo. So you need create a tag in a GitHub repo(Tutorial:  https://stackoverflow.com/questions/18216991/create-a-tag-in-a-github-repository)
+* Set the deployment details in _.travis.yml_
 
 ```
 deploy:
