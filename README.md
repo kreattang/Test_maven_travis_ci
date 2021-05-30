@@ -7,7 +7,7 @@ This repository is a demo of how to use [Travis CI](https://docs.travis-ci.com/)
 # Usage
 ## 1. Build
 * Sign in to your user Github account and fork this repo
-* Add a _.travis.yml_ file to your repo to tell Travis CI what to do, commit the changes and push it to your repo
+* Add a _.travis.yml_ file to your repo to tell Travis CI what to do, commit and push the changes to your repo
 ```
 language: java
 
@@ -38,10 +38,14 @@ jdk:
 
 ![avatar](https://github.com/kreattang/TravisCI_Java/blob/main/img/20210529154131.png)
 
-* Fix the README.md badges(copy the markdown code from [Travis CI](https://travis-ci.com/) and replace the top line of _readme.md_)
+* Create the README.md badge(copy the markdown code from [Travis CI](https://travis-ci.com/) and paste in the top line of _readme.md_)
 > [Travis CI](https://travis-ci.com/) => select your repository => click the build status image => select _FORMAT_ as Markdown => Copy the code of _RESULT_ => paste in the top line of _readme.md_
 
 ![acatar](https://github.com/kreattang/TravisCI_Java/blob/main/img/20210529154809.png)
+
+* You will see a badge like this in your repo of Github
+
+![acatar](https://github.com/kreattang/TravisCI_Java/blob/main/img/20210530100304.png)
 
 ## 2. Test
 This repo also integrates with Codecov to generate reports.
@@ -56,11 +60,16 @@ If a build is successful, the code is submitted for coverage analysis
 after_success:
   - bash <(curl -s https://codecov.io/bash)
 ```
-* Fix the README.md badge.
+* Commit and push the changes to your repo, which will trigger a new build in Travis CI
+* Create the README.md badge of coverage
 > [Codecov](https://codecov.io/gh)  =>select your repository => Setting => Bedge => Copy the contect of Markdown => paste in readme.md
 
+* You will see the badge like this
+
+![acatar](https://github.com/kreattang/TravisCI_Java/blob/main/img/20210530100532.png)
+
 ## 3.Deploy
-* Travis CI can help you release to Github. You will need to provide a Github personal access token(Tutorial: https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token). 
+* Travis CI can help you release to Github after a success build. You will need to provide a Github personal access token(Tutorial: https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token). 
 * Now that we have a token go to the project you want to use it with on Travis CI. Then on your project page, go to More options => Settings.
 
 ![avatar](https://github.com/kreattang/TravisCI_Java/blob/main/img/20210530094300.png)
@@ -70,7 +79,7 @@ after_success:
 ![avatar](https://github.com/kreattang/TravisCI_Java/blob/main/img/env-var.png)
 
 * Travis CI can automatically upload assets to git tags on your GitHub repo. So you need create a tag in a GitHub repo(Tutorial:  https://stackoverflow.com/questions/18216991/create-a-tag-in-a-github-repository)
-* Set the deployment details in _.travis.yml_
+* Add the following to your  _.travis.yml_(For more information about parameter configuration, please read https://docs.travis-ci.com/user/deployment-v2/providers/releases/)
 
 ```
 deploy:
@@ -79,18 +88,32 @@ deploy:
   skip_cleanup: true
   api_key: $GITHUB_TOKEN
   file:
-    - src/main/java/io/github/kreattang/travis_ci_tutorial_java/trityp.java
+    - .travis.yml
   on:
     tags: true
     branch: tag
-    repo: kreattang/Test_maven_travis_ci
+    repo: <your_github_username>/<your_repo_name>
 
 ```
+* Commit and push to trigger a Travis CI build. If the build is successful, you will see _.travis.yml_ in the _Releases_ section of your repo like this
 
+![avatar](https://github.com/kreattang/TravisCI_Java/blob/main/img/20210530104406.png)
+
+## 4. Trigger a failed build and notify build result
 
  * Travis CI can notify you about your build results through email, IRC, chat or custom webhooks.
+ *  Add the following to your  _.travis.yml_, which will send the build result to your Email
  ```
  notifications:
   email:
     - one@example.com(replace by your e-mail)
  ```
+ * Modify line 61 of trityp.java(src/main/java/io/github/kreattang/travis_ci_tutorial/trityp.java)  as follows
+ ```
+ triOut = triOut + 2;
+ ```
+![acatar](https://github.com/kreattang/TravisCI_Java/blob/main/img/20210530114344.png)
+ 
+* Commit and push to trigger a Travis CI build. As expected, this build will failed and you will receive an Email like this
+
+![acatar](https://github.com/kreattang/TravisCI_Java/blob/main/img/20210530113941.jpg)
